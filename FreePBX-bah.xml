@@ -8,7 +8,12 @@
   <Repository>bah1976/docker-freepbx</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Name>pbxgui</Name>
+      <Value>8009</Value>
+    </Variable>
+  </Environment>
   <Networking>
     <Mode>host</Mode>
     <Publish>
