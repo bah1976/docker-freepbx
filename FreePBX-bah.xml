@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Category>Communication</Category>
+  <Name>FreePBX BAH</Name>
+  <Description>FreePBX 12 Asterisk 13.1 - Let Freedom Ring</Description>
+  <Project>https://www.freepbx.org/</Project>
+  <Registry>https://github.com/bah1976/docker-freepbx</Registry>
+  <Repository>bah1976/docker-freepbx</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/freepbx-bah/backup</HostDir>
+      <ContainerDir>/etc/freepbxbackup</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>05616fd2</Version>
+  <WebUI>http://[IP]:[PORT:8009]</WebUI>
+  <Banner>http://svn.freepbx.org/freepbx/trunk/amp_conf/htdocs/admin/images/freepbx_small.png</Banner>
+  <Icon>http://svn.freepbx.org/freepbx/trunk/amp_conf/htdocs/admin/images/freepbx.png</Icon>
+</Container>
