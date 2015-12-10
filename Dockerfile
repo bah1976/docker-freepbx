@@ -164,7 +164,8 @@ RUN useradd -m $ASTERISKUSER && \
 RUN sed -i 's/\(^upload_max_filesize = \).*/\120M/' /etc/php5/apache2/php.ini && \
     cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf_orig && \
     sed -i 's/^\(User\|Group\).*/\1 asterisk/' /etc/apache2/apache2.conf && \
-    sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
+    sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf \
+    sed -i 's/Listen 80/Listen '$pbxgui'/' /etc/apache2/ports.conf
 
 # Configure Asterisk database in MYSQL
 RUN /etc/init.d/mysql start && \
